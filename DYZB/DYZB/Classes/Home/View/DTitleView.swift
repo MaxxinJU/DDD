@@ -119,7 +119,6 @@ extension DTitleView{
         //2、改变文字颜色
         targetLabel.textColor = UIColor(r: kNormalColor.0 - colorDetail.0*progress, g: kNormalColor.1 - colorDetail.1*progress, b: kNormalColor.2 - colorDetail.2*progress, alpha: 1)
         sourceLabel.textColor = UIColor(r: kHighlighrColor.0 + colorDetail.0*progress, g: kHighlighrColor.1 + colorDetail.1*progress, b: kHighlighrColor.2 + colorDetail.2*progress, alpha: 1)
-
     }
     
 }
