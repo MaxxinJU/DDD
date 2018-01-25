@@ -13,6 +13,18 @@ class DTabbarController: UITabBarController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+     
+        setUpUI()
+    }
+    
+    
+}
+
+//MARK:================= 界面布局 =============❤️========
+
+extension DTabbarController{
+    //添加子控制器
+    private func setUpUI(){
         
         addChildVc(name: "Home", title: "首页", defaultImage: "btn_home_normal", selectImage: "btn_home_selected")
         addChildVc(name: "Live", title: "直播", defaultImage: "btn_column_normal", selectImage: "btn_column_selected")
@@ -21,7 +33,8 @@ class DTabbarController: UITabBarController {
 
     }
     
-    func addChildVc(name: String, title: String, defaultImage: String, selectImage: String) {
+    //设置tabbarItem
+   private func addChildVc(name: String, title: String, defaultImage: String, selectImage: String) {
         
         let childVC = UIStoryboard(name: name, bundle: nil).instantiateInitialViewController()!
         childVC.title = title
