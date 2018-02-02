@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="headerView" id="U6b-Vx-4bR" customClass="CollectionHeaderView" customModule="DYZB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ECh-fs-eDH">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="5"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="5" id="4gl-OD-4O0"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_header_phone" translatesAutoresizingMaskIntoConstraints="NO" id="5Mi-AF-4sZ">
+                    <rect key="frame" x="6" y="11" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="2ul-aw-JJU"/>
+                        <constraint firstAttribute="height" constant="20" id="ivM-ad-4Dy"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="颜值" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzY-IX-Ign">
+                    <rect key="frame" x="31" y="11" width="42" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="42" id="1Pz-Nm-J3e"/>
+                        <constraint firstAttribute="height" constant="21" id="V6t-7G-smu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpW-LB-x5d">
+                    <rect key="frame" x="268" y="11" width="46" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="jzF-FR-LOj"/>
+                        <constraint firstAttribute="height" constant="19" id="tKi-Vy-6Rt"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="更多">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="kzY-IX-Ign" firstAttribute="centerY" secondItem="5Mi-AF-4sZ" secondAttribute="centerY" id="4UT-SV-s3Y"/>
+                <constraint firstItem="5Mi-AF-4sZ" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="6" id="8V8-jA-D9k"/>
+                <constraint firstItem="kzY-IX-Ign" firstAttribute="leading" secondItem="5Mi-AF-4sZ" secondAttribute="trailing" constant="5" id="EB9-I2-UgU"/>
+                <constraint firstItem="ECh-fs-eDH" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="FpT-Z1-58U"/>
+                <constraint firstItem="bpW-LB-x5d" firstAttribute="top" secondItem="ECh-fs-eDH" secondAttribute="bottom" constant="6" id="aKJ-cy-NwV"/>
+                <constraint firstItem="ECh-fs-eDH" firstAttribute="top" secondItem="VXr-Tz-HHm" secondAttribute="top" id="fq4-4W-GKZ"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="ECh-fs-eDH" secondAttribute="trailing" id="kA4-77-gJ6"/>
+                <constraint firstItem="5Mi-AF-4sZ" firstAttribute="top" secondItem="ECh-fs-eDH" secondAttribute="bottom" constant="6" id="lau-mW-Fga"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="bpW-LB-x5d" secondAttribute="trailing" constant="6" id="y46-jP-NSH"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="headerTitleLabel" destination="kzY-IX-Ign" id="hah-Rp-Dwk"/>
+                <outlet property="iconImageView" destination="5Mi-AF-4sZ" id="iD9-eA-hEr"/>
+            </connections>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="home_header_phone" width="18" height="18"/>
+    </resources>
+</document>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="YanZItemID" id="gTV-IL-0wX" customClass="YanZCollectionViewCell" customModule="DYZB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="173" height="230"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="173" height="230"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_cell_default_phone" translatesAutoresizingMaskIntoConstraints="NO" id="hFZ-C5-FS6">
+                        <rect key="frame" x="0.0" y="0.0" width="173" height="173"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="hFZ-C5-FS6" secondAttribute="height" multiplier="1:1" id="aQM-lD-hU2"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="郑镒勋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dk5-ib-kdz">
+                        <rect key="frame" x="5" y="178" width="43" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="0SK-fb-zSP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_location" translatesAutoresizingMaskIntoConstraints="NO" id="Yqn-vK-swW">
+                        <rect key="frame" x="5" y="204" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="UYN-M1-FtI"/>
+                            <constraint firstAttribute="width" constant="15" id="VZW-Qj-Znt"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="韩国 首尔" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEW-7W-opB">
+                        <rect key="frame" x="22" y="204.5" width="52.5" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="666人观看" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bp-dx-tdv">
+                        <rect key="frame" x="108" y="5" width="60" height="14.5"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="hFZ-C5-FS6" secondAttribute="trailing" id="9hN-Td-zUq"/>
+                <constraint firstItem="hEW-7W-opB" firstAttribute="leading" secondItem="Yqn-vK-swW" secondAttribute="trailing" constant="2" id="CDU-Qs-cZu"/>
+                <constraint firstItem="dk5-ib-kdz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="Csu-Ir-QMz"/>
+                <constraint firstItem="Yqn-vK-swW" firstAttribute="top" secondItem="dk5-ib-kdz" secondAttribute="bottom" constant="5" id="JaU-Rc-BrE"/>
+                <constraint firstItem="hEW-7W-opB" firstAttribute="centerY" secondItem="Yqn-vK-swW" secondAttribute="centerY" id="KSV-bf-tJ1"/>
+                <constraint firstItem="Yqn-vK-swW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="MnQ-uc-TJd"/>
+                <constraint firstAttribute="trailing" secondItem="6bp-dx-tdv" secondAttribute="trailing" constant="5" id="cfa-3T-7mb"/>
+                <constraint firstItem="6bp-dx-tdv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="gO3-lJ-7Xp"/>
+                <constraint firstItem="hFZ-C5-FS6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kZU-ZM-kDm"/>
+                <constraint firstItem="dk5-ib-kdz" firstAttribute="top" secondItem="hFZ-C5-FS6" secondAttribute="bottom" constant="5" id="qqU-11-gDb"/>
+                <constraint firstItem="hFZ-C5-FS6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="sKL-hQ-Hcw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="archorNameLabel" destination="dk5-ib-kdz" id="ylL-jA-HjV"/>
+                <outlet property="cityLabel" destination="hEW-7W-opB" id="MpH-aa-xZC"/>
+                <outlet property="looksCountLabel" destination="6bp-dx-tdv" id="lRy-2W-2lo"/>
+                <outlet property="yanzCellImageView" destination="hFZ-C5-FS6" id="T5Y-01-crU"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="54"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ico_location" width="12" height="12"/>
+        <image name="live_cell_default_phone" width="103" height="103"/>
+    </resources>
+</document>

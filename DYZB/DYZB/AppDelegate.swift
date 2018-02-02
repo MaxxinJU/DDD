@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+//第一部分（大数据）：http://capi.douyucdn.cn/api/v1/getbigDataRoom?time=1517390457881
+//第二部分（热门）：http://capi.douyucdn.cn/api/v1/getVerticalRoom
+//第三部分（多个组）：http://capi.douyucdn.cn/api/v1/getHotCate?limit=4&amp;offset=0&amp;time=1474252024
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

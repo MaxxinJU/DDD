@@ -22,8 +22,10 @@ class DHomeController: UIViewController {
         let py = CGFloat(kNavigationBarH+kStatusBarH+kTitleViewH)
         let pf = CGRect(x: 0, y:py, width: kScreenBoundW, height: kScreenBoundH-py)
         //创建控制器数组
+        let recommonVC = RecommondViewController()
         var vcs = [UIViewController]()
-        for _ in 0..<4{
+        vcs.append(recommonVC)
+        for _ in 0..<3{
             let vc = UIViewController()
             vcs.append(vc)
         }

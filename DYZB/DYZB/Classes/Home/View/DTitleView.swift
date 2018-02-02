@@ -9,12 +9,13 @@
 
 import UIKit
 //MARK:代理：点击label切换collectView的item
-private let kNormalColor: (CGFloat, CGFloat, CGFloat) = (85, 85, 85)
-private let kHighlighrColor: (CGFloat, CGFloat, CGFloat) = (255, 128, 0)
-private let colorDetail = (kNormalColor.0-kHighlighrColor.0, kNormalColor.1-kHighlighrColor.1, kNormalColor.2-kHighlighrColor.2)
 protocol PageTitleViewDelegate : class {
     func PageTitleView(titleView:DTitleView, selectIndex index: Int)
 }
+
+private let kNormalColor: (CGFloat, CGFloat, CGFloat) = (85, 85, 85)
+private let kHighlighrColor: (CGFloat, CGFloat, CGFloat) = (255, 128, 0)
+private let colorDetail = (kNormalColor.0-kHighlighrColor.0, kNormalColor.1-kHighlighrColor.1, kNormalColor.2-kHighlighrColor.2)
 
 class DTitleView: UIView {
     //MARK:定义属性
