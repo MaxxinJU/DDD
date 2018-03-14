@@ -25,7 +25,6 @@ extension RecomdViewModel{
         
         //1、加载大数据
         GCDgroup.enter()
-
         NetworkTools.requestData(type: .get, urlString: "http://capi.douyucdn.cn/api/v1/getbigDataRoom", parameters:["time" : Date.getCurrentTime()]) { (result) in
             
             guard let resultDict = result as? [String: Any] else{ return }

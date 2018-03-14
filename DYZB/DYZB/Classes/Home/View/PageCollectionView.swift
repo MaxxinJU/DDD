@@ -74,7 +74,6 @@ extension PageCollectionView{
         
         let offsetX = collectionView.bounds.width * CGFloat(currentIndex)
         collectionView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: true)
-        print(currentIndex)
     }
     
 }
@@ -113,8 +112,9 @@ extension PageCollectionView: UICollectionViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
 
         let currenOffsetX = scrollView.contentOffset.x
+        guard let starO = startOffsetX else{ return }
         //判断滑动方向
-        if currenOffsetX > startOffsetX! {
+        if currenOffsetX > starO {
             //1、进度
             progress = currenOffsetX/collectionView.bounds.width - floor(currenOffsetX/collectionView.bounds.width)
             
@@ -122,13 +122,15 @@ extension PageCollectionView: UICollectionViewDelegate {
             targetIndex = sourceIndex + 1
             
             //2、右划结束后，设置sourceIndex
-            if currenOffsetX - startOffsetX! == collectionView.bounds.width {
+            if currenOffsetX - starO == collectionView.bounds.width {
                 progress = 1.0
-                targetIndex = sourceIndex
+                targetIndex = sourceIndex == 4 ? 3 :sourceIndex
                 sourceIndex = sourceIndex - 1
+//MARK:此处如何约束超出范围的部分，需要查看源码
             }
             
-        }else if currenOffsetX < startOffsetX!{
+            
+        }else if currenOffsetX < starO{
             //1、进度
             progress = 1 - (currenOffsetX/collectionView.bounds.width - floor(currenOffsetX/collectionView.bounds.width))
             //2、计算TargetIndex
@@ -136,7 +138,8 @@ extension PageCollectionView: UICollectionViewDelegate {
             //左划结束后,设置
 
         }
-        //通知代理
+              
+        //通知代理（崩溃请注释掉，因为target超出范围）
         delegate?.pageCollectionView(pCollectionView: self, sourceIndex: sourceIndex, targetIndex: targetIndex, progress: progress)
         
     }

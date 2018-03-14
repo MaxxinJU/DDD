@@ -108,7 +108,7 @@ extension DTitleView{
     //MARK:接收collectionView传来的数据
     func getCurrentIndexAndProgress(sourceIndex: Int, targetIndex: Int, progress: CGFloat) {
         
-//        print(sourceIndex,"---->",targetIndex,progress)
+//        print(sourceIndex,"---->",targetIndex)
         let targetLabel = titleLabels[targetIndex]
         let sourceLabel = titleLabels[sourceIndex]
         
