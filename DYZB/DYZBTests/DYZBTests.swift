@@ -12,18 +12,29 @@ import XCTest
 class DYZBTests: XCTestCase {
     
     override func setUp() {
+        
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+      
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        super.tearDown()
+        
+    }
+    //测试网络请求
+    func testGet() {
+        //Given
+        let expectation = self.expectation(description: "NETWORK IS TIMEOUT");
+        //When
+        NetworkTools.requestData(type: .get, urlString: "http://capi.douyucdn.cn/api/v1/getVerticalRoom") { (result) in
+            
+            XCTAssertNotNil(result, "NOT NIL")
+            expectation.fulfill()
+        }
+        //Then:延迟时间
+        self.wait(for: [expectation], timeout: 5)
+        
     }
     
     func testPerformanceExample() {

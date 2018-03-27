@@ -7,9 +7,10 @@
 //
 
 import UIKit
-//http://capi.douyucdn.cn/api/v1/getHotCate?limit=4&amp;offset=0&amp;time=1474252024
-//第一部分（大数据）：http://capi.douyucdn.cn/api/v1/getbigDataRoom?time=1517390457881
-//第二部分（颜值）：http://capi.douyucdn.cn/api/v1/getVerticalRoom
+/**
+ 首页：游戏、大数据、颜值数据请求
+ */
+
 class RecomdViewModel:NSObject{
     
     lazy var pageGroups:[ArchorGroups] = [ArchorGroups]()
@@ -25,7 +26,7 @@ extension RecomdViewModel{
         
         //1、加载大数据
         GCDgroup.enter()
-        NetworkTools.requestData(type: .get, urlString: "http://capi.douyucdn.cn/api/v1/getbigDataRoom", parameters:["time" : Date.getCurrentTime()]) { (result) in
+        NetworkTools.requestData(type: .get, urlString: hDataURLStr, parameters:["time" : Date.getCurrentTime()]) { (result) in
             
             guard let resultDict = result as? [String: Any] else{ return }
             guard let bigDataArray = resultDict["data"] as? [[String:Any]] else{ return }
@@ -39,7 +40,7 @@ extension RecomdViewModel{
         }
         //2、加载颜值数据，颜值数据有地址
         GCDgroup.enter()
-        NetworkTools.requestData(type: .get, urlString: "http://capi.douyucdn.cn/api/v1/getVerticalRoom") { (result) in
+        NetworkTools.requestData(type: .get, urlString: hBeautyUrlStr) { (result) in
             
             guard let prettyDict = result as? [String : Any] else{ return }
             guard let prettyData = prettyDict["data"] as? [[String : Any]] else{ return }
@@ -56,7 +57,7 @@ extension RecomdViewModel{
         //3、加载游戏部分数据
         GCDgroup.enter()
         let parameters = ["limit" : "4", "offset" : "0", "time" : Date.getCurrentTime()] as [String : Any]
-        NetworkTools.requestData(type: .get, urlString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters:parameters) { (result) in
+        NetworkTools.requestData(type: .get, urlString: hGameUrlStr, parameters:parameters) { (result) in
             
             guard let resultDict = result as? [String: Any] else{ return }
             guard let dataArray = resultDict["data"] as? [[String:Any]] else{ return }

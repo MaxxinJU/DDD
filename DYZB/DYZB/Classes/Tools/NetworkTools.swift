@@ -21,7 +21,6 @@ class NetworkTools{
                 print("网络请求错误：",response.result.error ?? "请求数据为空")
                 return
             }
-//            print("请求结果",res)
             finishedCallback(res)
             
         }
